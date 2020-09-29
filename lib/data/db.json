@@ -1,0 +1,60 @@
+{
+    "destination": [
+        {
+            "id": 1,
+            "city": "Alushta",
+            "description": "A beautifull subburb sity in Crimea",
+            "imageUrl": "assets/images/alushta.jpg",
+            "places": [
+                {
+                    "imageUrl": "assets/images/alushta_city_beach.jpg",
+                    "name": "City Beach",
+                    "description": "The beach at the Alushta embankment is a kind of continuation of the Central Beach, the main difference from which is the presence of large breakwaters. Breakwaters, in turn, divide the beach into small isolated zones.",
+                    "workingHours": [
+                        "6:00 am",
+                        "11:00 pm"
+                    ],
+                    "rating": 3
+                },
+                {
+                    "imageUrl": "assets/images/alushta_park.jpg",
+                    "name": "Alushta Park",
+                    "description": "One of the most beloved attractions of the city of Alushta, among the townspeople and tourists, by right, can be considered the Primorsky Park. It is here, in a relatively small area, that the greenest and least built-up part of the city is located.",
+                    "workingHours": [
+                        "6:00 am",
+                        "11:00 pm"
+                    ],
+                    "rating": 2
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "city": "Sevastopol",
+            "description": "A beautifull subburb sity in Crimea",
+            "imageUrl": "assets/images/sevastopol.jpg",
+            "places": [
+                {
+                    "imageUrl": "assets/images/sevastopol_blue_lagon.jpg",
+                    "name": "City Beach",
+                    "description": "The beach at the Alushta embankment is a kind of continuation of the Central Beach, the main difference from which is the presence of large breakwaters. Breakwaters, in turn, divide the beach into small isolated zones.",
+                    "workingHours": [
+                        "6:00 am",
+                        "11:00 pm"
+                    ],
+                    "rating": 3
+                },
+                {
+                    "imageUrl": "assets/images/sevastopol_park.jpg",
+                    "name": "Sevastopol Park",
+                    "description": "The Blue Bay beach in Sevastopol is rightfully considered one of the best in the city, although the beach is not municipal, but thousands of tourists visit it every year. Every year the infrastructure of the beach develops and improves, but it is still impossible to call it well-equipped.",
+                    "workingHours": [
+                        "6:00 am",
+                        "11:00 pm"
+                    ],
+                    "rating": 2
+                }
+            ]
+        }
+    ]
+}
