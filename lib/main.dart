@@ -8,6 +8,9 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final newTextTheme = Theme.of(context).textTheme.apply(
+          bodyColor: Color(0xFF023529),
+        );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -19,3 +22,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+// #023529
