@@ -13,8 +13,8 @@ I used [JSON Server](https://www.npmjs.com/package/json-server) for mockup backe
  How to setup mockup server is explained in a package [JSON Server](https://www.npmjs.com/package/json-server).
 
  ## Dependencies 
-    - equatable: ^1.2.5
-    - [flutter_svg: ^0.19.0](https://pub.dev/packages/flutter_svg)
-    - [font_awesome_flutter: ^8.8.1](https://pub.dev/packages/font_awesome_flutter)
+equatable: ^1.2.5
+[flutter_svg: ^0.19.0](https://pub.dev/packages/flutter_svg)
+[font_awesome_flutter: ^8.8.1](https://pub.dev/packages/font_awesome_flutter)
 
 
