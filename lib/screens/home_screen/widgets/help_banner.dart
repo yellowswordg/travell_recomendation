@@ -15,11 +15,12 @@ class HelpBanner extends StatelessWidget {
     return Container(
       height: SizeConfig.blockSizeVertical * 20,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-            colors: [kGreen, Colors.yellow],
-            begin: FractionalOffset.centerRight,
-            end: FractionalOffset.bottomRight,
-            stops: [0.6, 1]),
+        gradient: RadialGradient(
+          colors: [Colors.yellow, kGreen],
+          stops: [0.01, 1],
+          center: Alignment.bottomRight,
+          radius: 0.5,
+        ),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Padding(

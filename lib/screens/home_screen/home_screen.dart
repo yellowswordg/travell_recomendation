@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:travell_recomendation/screens/home_screen/widgets/help_widgets.dart';
+import 'package:travell_recomendation/data/data.dart';
+import 'package:travell_recomendation/models/models.dart';
+
+import 'package:travell_recomendation/screens/home_screen/widgets/widgets.dart';
 import 'package:travell_recomendation/utils/constants.dart';
 import 'package:travell_recomendation/utils/size_config.dart';
 
@@ -11,18 +14,20 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<IconData> _icons = [
+  List<IconTile> _iconTiles = List.from(iconTiles);
+
+  List _icons = [
     FontAwesomeIcons.borderAll,
     FontAwesomeIcons.umbrellaBeach,
     FontAwesomeIcons.tree,
     FontAwesomeIcons.mountain,
     FontAwesomeIcons.fish,
-    FontAwesomeIcons.addressBook
   ];
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     double defaultSize = SizeConfig.defaultSize;
+
     return Scaffold(
       backgroundColor: kWhite,
       extendBodyBehindAppBar: true,
@@ -40,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           Icon(
-            FontAwesomeIcons.search,
+            Icons.search,
             size: 30,
             color: kGreen,
           ),
@@ -53,10 +58,26 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ListView(
           padding: EdgeInsets.symmetric(
             vertical: defaultSize * 2,
-            horizontal: defaultSize * 3,
           ),
           children: [
-            HelpBanner(defaultSize: defaultSize),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: defaultSize * 2),
+              child: HelpBanner(defaultSize: defaultSize),
+            ),
+            SizedBox(
+              height: defaultSize * 2,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomTitle(
+                    defaultSize: defaultSize, title: 'Activity of your choice'),
+                IconTileRow(
+                    defaultSize: defaultSize,
+                    icons: _icons,
+                    iconTiles: _iconTiles),
+              ],
+            ),
           ],
         ),
       ),

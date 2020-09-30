@@ -1,3 +1,4 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travell_recomendation/models/models.dart';
 
 final alushtaCityBeach = Activity(
@@ -49,3 +50,11 @@ final sevastopol = Destination(
   activities: [sevastopalBlueLagon, sevastopalPark],
 );
 final List<Destination> destinations = [sevastopol, alushta];
+
+List<IconTile> iconTiles = [
+  IconTile(icon: FontAwesomeIcons.borderAll, lable: 'All'),
+  IconTile(icon: FontAwesomeIcons.umbrellaBeach, lable: 'Beach'),
+  IconTile(icon: FontAwesomeIcons.tree, lable: 'Forest'),
+  IconTile(icon: FontAwesomeIcons.mountain, lable: 'Mountain'),
+  IconTile(icon: FontAwesomeIcons.fish, lable: 'FishingsW'),
+];
