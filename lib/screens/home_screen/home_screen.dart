@@ -16,7 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
     FontAwesomeIcons.umbrellaBeach,
     FontAwesomeIcons.tree,
     FontAwesomeIcons.mountain,
-    FontAwesomeIcons.fish
+    FontAwesomeIcons.fish,
+    FontAwesomeIcons.addressBook
   ];
   @override
   Widget build(BuildContext context) {
