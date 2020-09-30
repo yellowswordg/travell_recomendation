@@ -46,9 +46,9 @@ class IconTileRow extends StatelessWidget {
                       _icons[index],
                       color: Colors.white,
                     ),
-                    SizedBox(
-                      height: defaultSize,
-                    ),
+                    // SizedBox(
+                    //   height: defaultSize,
+                    // ),
                     // Text(
                     //   _icons[index][1],
                     //   style: TextStyle(

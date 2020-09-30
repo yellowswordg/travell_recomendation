@@ -19,7 +19,7 @@ final alushtaPark = Activity(
 );
 
 final sevastopalBlueLagon = Activity(
-  name: "City Beach",
+  name: "Blue Lagone Beach",
   imageUrl: "assets/images/sevastopol_blue_lagon.jpg",
   description:
       "The beach at the Alushta embankment is a kind of continuation of the Central Beach, the main difference from which is the presence of large breakwaters. Breakwaters, in turn, divide the beach into small isolated zones.",
@@ -34,22 +34,45 @@ final sevastopalPark = Activity(
   rating: 3,
   workingHours: ["6:00 am", "11:00 pm"],
 );
+final alushtaRotunda = Activity(
+  name: "Rotunda",
+  imageUrl: "assets/images/alushta_rotunda.jpg",
+  description:
+      "A snow-white rotunda with six columns and the inscription Alushta-resort appeared on the Black Sea coast in 1951, when the city was being landscaped in a difficult post-war period. Located on the embankment, it serves as a landmark for meetings and a place from which tourists usually begin to familiarize themselves with the resort.",
+  rating: 5,
+  workingHours: ["6:00 am", "11:00 pm"],
+);
+final bahchisaraiHanPalace = Activity(
+  name: "Han Palace",
+  imageUrl: "assets/images/bahchisarai_han_palace.jpg",
+  description:
+      "City ​​in Crimea. The administrative center of the Bakhchisarai district, which is part of the Republic of Crimea according to the administrative-territorial structure of Russia since 2014",
+  rating: 4,
+  workingHours: ["6:00 am", "11:00 pm"],
+);
 
 final alushta = Destination(
   id: 1,
   city: "Alushta",
   description: "A beautifull subburb sity in Crimea",
   imageUrl: "assets/images/alushta.jpg",
-  activities: [alushtaCityBeach, alushtaPark],
+  activities: [alushtaCityBeach, alushtaPark, alushtaRotunda],
 );
 final sevastopol = Destination(
-  id: 1,
+  id: 2,
   city: "Sevastopol",
   description: "A beautifull subburb sity in Crimea",
   imageUrl: "assets/images/sevastopol.jpg",
   activities: [sevastopalBlueLagon, sevastopalPark],
 );
-final List<Destination> destinations = [sevastopol, alushta];
+final bahchisarai = Destination(
+  id: 2,
+  city: "Bahchisarai",
+  description: "A beautifull hill sity in Crimea",
+  imageUrl: "assets/images/bahchisarai.jpg",
+  activities: [bahchisaraiHanPalace],
+);
+final List<Destination> destinations = [sevastopol, bahchisarai, alushta];
 
 List<IconTile> iconTiles = [
   IconTile(icon: FontAwesomeIcons.borderAll, lable: 'All'),
@@ -62,5 +85,7 @@ final activityTop = [
   alushtaCityBeach,
   alushtaPark,
   sevastopalBlueLagon,
-  sevastopalPark
+  sevastopalPark,
+  bahchisaraiHanPalace,
+  alushtaRotunda,
 ];
