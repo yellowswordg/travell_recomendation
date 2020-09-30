@@ -58,3 +58,9 @@ List<IconTile> iconTiles = [
   IconTile(icon: FontAwesomeIcons.mountain, lable: 'Mountain'),
   IconTile(icon: FontAwesomeIcons.fish, lable: 'FishingsW'),
 ];
+final activityTop = [
+  alushtaCityBeach,
+  alushtaPark,
+  sevastopalBlueLagon,
+  sevastopalPark
+];

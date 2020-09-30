@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travell_recomendation/data/data.dart';
 import 'package:travell_recomendation/models/models.dart';
+import 'package:travell_recomendation/screens/home_screen/widgets/activity_carousel.dart';
+import 'package:travell_recomendation/screens/home_screen/widgets/destination_carousel.dart';
 
 import 'package:travell_recomendation/screens/home_screen/widgets/widgets.dart';
 import 'package:travell_recomendation/utils/constants.dart';
@@ -64,20 +66,23 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.symmetric(horizontal: defaultSize * 2),
               child: HelpBanner(defaultSize: defaultSize),
             ),
-            SizedBox(
-              height: defaultSize * 2,
-            ),
+            SizedBox(height: defaultSize * 1),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomTitle(
                     defaultSize: defaultSize, title: 'Activity of your choice'),
                 IconTileRow(
-                    defaultSize: defaultSize,
-                    icons: _icons,
-                    iconTiles: _iconTiles),
+                  defaultSize: defaultSize,
+                  icons: _icons,
+                  iconTiles: _iconTiles,
+                ),
               ],
             ),
+            SizedBox(height: defaultSize * 1),
+            ActivityCarousel(defaultSize: defaultSize),
+            SizedBox(height: defaultSize * 1),
+            DestinationCarousel(defaultSize: defaultSize)
           ],
         ),
       ),
