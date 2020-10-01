@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travell_recomendation/data/data.dart';
 import 'package:travell_recomendation/models/models.dart';
 import 'package:travell_recomendation/screens/home_screen/widgets/widgets.dart';
+import 'package:travell_recomendation/utils/helpers.dart';
 
 class ActivityCarousel extends StatelessWidget {
   const ActivityCarousel({
@@ -56,7 +57,7 @@ class ActivityCarousel extends StatelessWidget {
                           height: defaultSize * 20,
                           fit: BoxFit.cover,
                           image: AssetImage(
-                            activity.imageUrl,
+                            activity.frontImage,
                           ),
                         ),
                       ),
@@ -72,7 +73,7 @@ class ActivityCarousel extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _buildRatingStars(activity.rating),
+                            buildRatingStars(activity.rating),
                             SizedBox(
                               height: defaultSize * 0.5,
                             ),

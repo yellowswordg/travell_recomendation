@@ -19,7 +19,7 @@ class TopBanner extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: SizeConfig.screenWidth,
+          height: SizeConfig.screenWidth * 0.8,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
             boxShadow: [
@@ -38,12 +38,12 @@ class TopBanner extends StatelessWidget {
             child: Image.asset(
               destination.imageUrl,
               fit: BoxFit.cover,
-              height: SizeConfig.screenWidth,
+              height: SizeConfig.screenWidth * 0.8,
             ),
           ),
         ),
         Container(
-          height: SizeConfig.screenWidth,
+          height: SizeConfig.screenWidth * 0.8,
           decoration: BoxDecoration(
             color: Colors.black.withOpacity(0.3),
             borderRadius: BorderRadius.circular(30),

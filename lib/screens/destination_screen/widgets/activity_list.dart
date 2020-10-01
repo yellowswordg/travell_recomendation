@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travell_recomendation/models/models.dart';
 import 'package:travell_recomendation/utils/constants.dart';
+import 'package:travell_recomendation/utils/helpers.dart';
 
 class ActivityList extends StatelessWidget {
   const ActivityList({
@@ -11,18 +12,6 @@ class ActivityList extends StatelessWidget {
 
   final double defaultSize;
   final Destination destination;
-
-  Text _buildRatingStars(int rating) {
-    String stars = '';
-    for (int i = 0; i < rating; i++) {
-      stars += '⭐ ';
-    }
-    stars.trim();
-    return Text(
-      stars,
-      style: TextStyle(fontSize: defaultSize * 1.2),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +28,11 @@ class ActivityList extends StatelessWidget {
                 height: defaultSize * 15,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(
-                      20.0,
-                    )),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(
+                    20.0,
+                  ),
+                ),
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(130.0, 20.0, 20.0, 20.0),
                   child: Column(
@@ -52,7 +42,7 @@ class ActivityList extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            width: 120.0,
+                            width: defaultSize * 14.0,
                             child: Text(
                               activity.name,
                               style: TextStyle(fontSize: 18.0),
@@ -60,7 +50,7 @@ class ActivityList extends StatelessWidget {
                               maxLines: 2,
                             ),
                           ),
-                          _buildRatingStars(activity.rating)
+                          buildRatingStars(activity.rating)
                         ],
                       ),
                       SizedBox(
@@ -93,7 +83,7 @@ class ActivityList extends StatelessWidget {
                   child: Image(
                     width: 120.0,
                     image: AssetImage(
-                      activity.imageUrl,
+                      activity.frontImage,
                     ),
                     fit: BoxFit.cover,
                   ),
