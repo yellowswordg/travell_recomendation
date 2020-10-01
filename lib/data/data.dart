@@ -3,14 +3,14 @@ import 'package:travell_recomendation/models/models.dart';
 
 final alushtaCityBeach = Activity(
   name: "City Beach",
-  frontImage: "assets/images/alushta/alushta_city_beach.jpg",
+  frontImage: "assets/images/alushta_city_beach.jpg",
   description:
       "The beach at the Alushta embankment is a kind of continuation of the Central Beach, the main difference from which is the presence of large breakwaters. Breakwaters, in turn, divide the beach into small isolated zones.",
   rating: 3,
   imageUrls: [
-    "assets/images/alushta/alushta_city_beach.jpg",
-    "assets/images/alushta/alushta_city_beach_01.jpg",
-    "assets/images/alushta/alushta_city_beach_02.jpg"
+    "assets/images/alushta_city_beach.jpg",
+    "assets/images/alushta_city_beach_01.jpg",
+    "assets/images/alushta_city_beach_02.jpg"
   ],
   workingHours: ["6:00 am", "11:00 pm"],
 );
@@ -44,20 +44,20 @@ final sevastopalPark = Activity(
 );
 final alushtaRotunda = Activity(
   name: "Rotunda",
-  frontImage: "assets/images/alushta/alushta_rotunda.jpg",
+  frontImage: "assets/images/alushta_rotunda.jpg",
   description:
       "A snow-white rotunda with six columns and the inscription Alushta-resort appeared on the Black Sea coast in 1951, when the city was being landscaped in a difficult post-war period. Located on the embankment, it serves as a landmark for meetings and a place from which tourists usually begin to familiarize themselves with the resort.",
   rating: 5,
-  imageUrls: ['assets/images/alushta/alushta_rotunda.jpg'],
+  imageUrls: ['assets/images/alushta_rotunda.jpg'],
   workingHours: ["6:00 am", "11:00 pm"],
 );
 final alushtaAluston = Activity(
   name: "Aluston",
-  frontImage: "assets/images/alushta/alushta_aluston.jpg",
+  frontImage: "assets/images/alushta_aluston.jpg",
   description:
       "Today, from the fortress Aluston, erected in the 6th century, one tower and part of the adjoining wall have survived. The fortress was built at the direction of the Byzantine emperor Justinian I back in the 6th century. Perfectly fortified Aluston saved more than once ...",
   rating: 5,
-  imageUrls: ['assets/images/alushta/alushta_aluston.jpg'],
+  imageUrls: ['assets/images/alushta_aluston.jpg'],
   workingHours: ["6:00 am", "11:00 pm"],
 );
 final bahchisaraiHanPalace = Activity(

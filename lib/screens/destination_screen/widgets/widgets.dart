@@ -1,1 +1,1 @@
-export 'top_banner.dart';
+export '../../../widgets/top_banner.dart';

@@ -4,7 +4,8 @@ import 'package:travell_recomendation/utils/constants.dart';
 import 'package:travell_recomendation/utils/size_config.dart';
 
 import 'widgets/activity_list.dart';
-import 'widgets/top_banner.dart';
+import 'widgets/destination_banner_title.dart';
+import '../../widgets/top_banner.dart';
 
 class DestinationScreen extends StatelessWidget {
   final Destination destination;
@@ -20,7 +21,11 @@ class DestinationScreen extends StatelessWidget {
       backgroundColor: kWhite,
       body: Column(
         children: [
-          TopBanner(destination: destination, defaultSize: defaultSize),
+          TopBanner(
+            imgUrl: destination.imageUrl,
+            defaultSize: defaultSize,
+            title: DestinationBannerTitle(destination: destination),
+          ),
           ActivityList(defaultSize: defaultSize, destination: destination)
         ],
       ),

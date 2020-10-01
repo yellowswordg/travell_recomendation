@@ -7,12 +7,14 @@ import 'package:travell_recomendation/utils/size_config.dart';
 class TopBanner extends StatelessWidget {
   const TopBanner({
     Key key,
-    @required this.destination,
     @required this.defaultSize,
+    this.title,
+    this.imgUrl,
   }) : super(key: key);
 
-  final Destination destination;
+  final String imgUrl;
   final double defaultSize;
+  final Widget title;
 
   @override
   Widget build(BuildContext context) {
@@ -31,15 +33,12 @@ class TopBanner extends StatelessWidget {
             ],
           ),
         ),
-        Hero(
-          tag: destination.imageUrl,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(30.0),
-            child: Image.asset(
-              destination.imageUrl,
-              fit: BoxFit.cover,
-              height: SizeConfig.screenWidth * 0.8,
-            ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(30.0),
+          child: Image.asset(
+            imgUrl,
+            fit: BoxFit.cover,
+            height: SizeConfig.screenWidth * 0.8,
           ),
         ),
         Container(
@@ -68,28 +67,7 @@ class TopBanner extends StatelessWidget {
         Positioned(
           left: defaultSize * 2,
           bottom: defaultSize * 4,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                destination.city,
-                style: TextStyle(
-                  color: Colors.white.withOpacity(0.8),
-                  fontSize: 35.0,
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: 1.2,
-                ),
-              ),
-              SizedBox(width: 5.0),
-              Text(
-                "${destination.activities.length} Destinations",
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 20.0,
-                ),
-              ),
-            ],
-          ),
+          child: title,
         )
       ],
     );

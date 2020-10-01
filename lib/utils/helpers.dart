@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travell_recomendation/utils/constants.dart';
 
-Row buildRatingStars(int rating) {
+Row buildRatingStars(int rating, {double size = 14}) {
   return Row(
     children: [
       ...List.generate(
@@ -10,12 +10,12 @@ Row buildRatingStars(int rating) {
             ? Icon(
                 Icons.star,
                 color: Colors.amber,
-                size: 14,
+                size: size,
               )
             : Icon(
                 Icons.star,
                 color: kWhite,
-                size: 14.0,
+                size: size,
               ),
       )
     ],
