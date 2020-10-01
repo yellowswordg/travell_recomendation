@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travell_recomendation/models/models.dart';
 import 'package:travell_recomendation/utils/constants.dart';
 import 'package:travell_recomendation/utils/helpers.dart';
+import 'package:travell_recomendation/widgets/star_row.dart';
 
 class ActivityList extends StatelessWidget {
   const ActivityList({
@@ -50,7 +51,10 @@ class ActivityList extends StatelessWidget {
                               maxLines: 2,
                             ),
                           ),
-                          buildRatingStars(activity.rating)
+                          StarRow(
+                            rating: activity.rating,
+                            size: 14,
+                          ),
                         ],
                       ),
                       SizedBox(

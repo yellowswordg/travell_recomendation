@@ -4,6 +4,7 @@ import 'package:travell_recomendation/models/models.dart';
 import 'package:travell_recomendation/screens/activity_screen/activity_screen.dart';
 import 'package:travell_recomendation/screens/home_screen/widgets/widgets.dart';
 import 'package:travell_recomendation/utils/helpers.dart';
+import 'package:travell_recomendation/widgets/star_row.dart';
 
 class ActivityCarousel extends StatelessWidget {
   const ActivityCarousel({
@@ -80,7 +81,10 @@ class ActivityCarousel extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              buildRatingStars(activity.rating),
+                              StarRow(
+                                rating: activity.rating,
+                                size: 14,
+                              ),
                               SizedBox(
                                 height: defaultSize * 0.5,
                               ),

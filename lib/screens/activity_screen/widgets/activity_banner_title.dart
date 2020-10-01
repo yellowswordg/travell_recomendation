@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travell_recomendation/models/models.dart';
 import 'package:travell_recomendation/utils/constants.dart';
 import 'package:travell_recomendation/utils/helpers.dart';
+import 'package:travell_recomendation/widgets/star_row.dart';
 
 class ActivityBannerTitle extends StatelessWidget {
   final Activity activity;
@@ -14,7 +15,10 @@ class ActivityBannerTitle extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        buildRatingStars(activity.rating, size: 20),
+        StarRow(
+          rating: activity.rating,
+          size: 20,
+        ),
         SizedBox(width: 5.0),
         Text(
           activity.name,
