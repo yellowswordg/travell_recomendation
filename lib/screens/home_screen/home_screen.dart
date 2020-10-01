@@ -10,6 +10,8 @@ import 'package:travell_recomendation/screens/home_screen/widgets/widgets.dart';
 import 'package:travell_recomendation/utils/constants.dart';
 import 'package:travell_recomendation/utils/size_config.dart';
 
+import 'widgets/custom_appbar.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -33,58 +35,35 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: kWhite,
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset(
-            "assets/icons/nine.svg",
-            color: kGreen,
-            height: 30,
-            width: 30,
-          ),
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+          vertical: defaultSize * 2,
         ),
-        actions: [
-          Icon(
-            Icons.search,
-            size: 30,
-            color: kGreen,
+        children: [
+          CustomAppBar(defaultSize: defaultSize),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: defaultSize * 2),
+            child: HelpBanner(defaultSize: defaultSize),
           ),
-          SizedBox(
-            width: defaultSize * 2,
+          SizedBox(height: defaultSize * 2),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomTitle(
+                  defaultSize: defaultSize, title: 'Activity of your choice'),
+              SizedBox(height: defaultSize),
+              IconTileRow(
+                defaultSize: defaultSize,
+                icons: _icons,
+                iconTiles: _iconTiles,
+              ),
+            ],
           ),
+          SizedBox(height: defaultSize),
+          ActivityCarousel(defaultSize: defaultSize),
+          SizedBox(height: defaultSize),
+          DestinationCarousel(defaultSize: defaultSize)
         ],
-      ),
-      body: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.symmetric(
-            vertical: defaultSize * 2,
-          ),
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: defaultSize * 2),
-              child: HelpBanner(defaultSize: defaultSize),
-            ),
-            SizedBox(height: defaultSize * 1),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CustomTitle(
-                    defaultSize: defaultSize, title: 'Activity of your choice'),
-                IconTileRow(
-                  defaultSize: defaultSize,
-                  icons: _icons,
-                  iconTiles: _iconTiles,
-                ),
-              ],
-            ),
-            SizedBox(height: defaultSize * 1),
-            ActivityCarousel(defaultSize: defaultSize),
-            SizedBox(height: defaultSize * 1),
-            DestinationCarousel(defaultSize: defaultSize)
-          ],
-        ),
       ),
     );
   }
